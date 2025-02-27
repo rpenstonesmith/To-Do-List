@@ -52,11 +52,7 @@ li {
     align-items: center;
 }
 
-li:hover {
-    background-color: #2c3e58;
-}
-
-input {
+input[type='text'] {
     padding: 10px 15px;
     border: none;
     border-radius: 25px;
@@ -65,11 +61,35 @@ input {
     color: white;
 }
 
-input::placeholder {
+input[type='text']::placeholder {
     color: #ffffffb3
 }
 
-input:focus {
+input[type='text']:focus {
     outline: none;
+}
+
+span {
+    color: white;
+}
+
+.check-button {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.delete-button {
+    margin-left: auto;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #c8392b;
 }
 

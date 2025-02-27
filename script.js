@@ -1,4 +1,5 @@
-function addTask() {
+function addTask() {event.preventDefault(); 
+  event.preventDefault(); 
   const taskInput = document.getElementById("taskInput");
   const taskList = document.getElementById("taskList");
 
@@ -13,7 +14,7 @@ function addTask() {
   checkBox.type = "checkbox";
   checkBox.classList.add("check-button");
   checkBox.onclick = function () {
-    li.style.textDecoration = checkBox.checked ? "line-through" : "none";
+    taskText.style.textDecoration = checkBox.checked ? "line-through" : "none";
   };
 
   let taskText = document.createElement("span");
@@ -28,7 +29,8 @@ function addTask() {
 
   li.appendChild(checkBox);
   li.appendChild(taskText);
-  li.appendChild(li);
+  li.appendChild(deleteButton);
+  taskList.appendChild(li);
 
-  taskInput.value = "";
+  taskInput.value = '';
 }
